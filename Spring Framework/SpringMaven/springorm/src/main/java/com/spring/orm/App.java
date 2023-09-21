@@ -1,0 +1,114 @@
+package com.spring.orm;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.List;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.spring.orm.dao.StudentDao;
+import com.spring.orm.entities.Student;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+//        System.out.println( "Hello World!" );
+    ApplicationContext context=	new ClassPathXmlApplicationContext("config.xml");
+    StudentDao studentDao= context.getBean("studentDao",StudentDao.class);
+//    Student student=new Student(2324,"kishlay chadnan","Buxar");
+//    int r = studentDao.insert(student);
+//    System.out.println("done " +r);
+    
+    BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+    boolean  go=true;
+    while(go) {
+    	System.out.println("press 1 for insert");
+        System.out.println("press 2 for display all");
+        System.out.println("press 3 for display single");
+        System.out.println("press 4 for delete");
+        System.out.println("press 5 for update");
+        System.out.println("press 6 for exit");
+        
+        try {
+        	int input = Integer.parseInt(br.readLine());
+			switch(input) {
+			
+			case 1:
+				//add a new student
+				System.out.println("enter used id : ");
+			    int uId=Integer.parseInt(br.readLine());
+			    
+			    System.out.println("enter used name : ");
+			    String uName=br.readLine();
+			    
+			    System.out.println("enter used city : ");
+			    String uCity=br.readLine();
+				
+			    Student s=new Student();
+			    s.setStudentId(uId);
+			    s.setStudentName(uName);
+			    s.setStudentCity(uCity);
+			    
+			    int r = studentDao.insert(s);
+			    System.out.println(r + "student added");
+			    System.out.println("**************************************");
+			    
+				break;
+			case 2:
+				//display all student/ get all student
+				List<Student> allStudents = studentDao.getAllStudents();
+				for(Student st:allStudents) {
+					System.out.println("Id : "+st.getStudentId());
+					System.out.println("Name : "+st.getStudentName());
+					System.out.println("city : "+st.getStudentCity());
+					System.out.println("-----------------------------------------2");
+				}
+				
+				
+				break;
+				
+			case 3:
+				//display single student
+				//get single student
+				System.out.println("enter used id : ");
+			    int userId=Integer.parseInt(br.readLine());
+				Student student = studentDao.getStudent(userId);
+				System.out.println("Id : "+student.getStudentId());
+				System.out.println("Name : "+student.getStudentName());
+				System.out.println("city : "+student.getStudentCity());
+				System.out.println("-----------------------------------------2");
+				
+				break;
+				
+			case 4:
+				//delete
+				System.out.println("enter used id : ");
+			    int id=Integer.parseInt(br.readLine());
+				studentDao.deleteStudent(id);
+				System.out.println("student deleted.... ");
+				break;
+			case 5:
+				//update
+				break;
+			case 6:
+				//switch
+				go=false;
+				break;
+				
+			}       	 	
+		} catch (Exception e) {
+			System.out.println("invalid input");
+			System.out.println(e.getMessage());
+		}
+    	
+    }
+    System.out.println("thankyou for using - Bye - see you soon");
+    
+    }
+}

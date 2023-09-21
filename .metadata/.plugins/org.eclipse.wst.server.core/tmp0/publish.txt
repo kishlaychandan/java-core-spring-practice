@@ -1,0 +1,13 @@
+#Tomcat publish data
+#Thu Sep 21 23:12:50 IST 2023
+org.eclipse.jst.jee.server\:com.KodeNestApp=C\:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\wtpwebapps\\com.KodeNestApp
+org.eclipse.jst.jee.server\:com.ServletConfig=C\:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\wtpwebapps\\com.ServletConfig
+org.eclipse.jst.jee.server\:com.ServletContext=C\:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\wtpwebapps\\com.ServletContext
+org.eclipse.jst.jee.server\:com.ServletsCommunication=C\:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\wtpwebapps\\com.ServletsCommunication
+org.eclipse.jst.jee.server\:com.UserValidation=C\:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\wtpwebapps\\com.UserValidation
+org.eclipse.jst.jee.server\:com.assignment=C\:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\wtpwebapps\\com.assignment
+org.eclipse.jst.jee.server\:com.cookies=C\:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\wtpwebapps\\com.cookies
+org.eclipse.jst.jee.server\:com.firstApp=C\:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\wtpwebapps\\com.firstApp
+org.eclipse.jst.jee.server\:com.webApp2=C\:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\wtpwebapps\\com.webApp2
+org.eclipse.jst.jee.server\:com.webApp3=C\:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\wtpwebapps\\com.webApp3
+org.eclipse.jst.jee.server\:learning=C\:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\wtpwebapps\\learning

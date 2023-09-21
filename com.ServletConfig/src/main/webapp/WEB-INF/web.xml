@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>com.ServletConfig</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  
+  <context-param>
+  <param-name>Mission</param-name>
+  <param-value>GEtting student placed</param-value>
+  </context-param>
+  
+  <servlet>
+  <servlet-name>train</servlet-name>
+  <servlet-class>com.ServletConfig.TrainingServlet</servlet-class>
+  <init-param>
+  <param-name>JOB</param-name>
+  <param-value>Teaching Student!</param-value>
+  
+  </init-param>
+  
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>train</servlet-name>
+  <url-pattern>/t</url-pattern> 
+  </servlet-mapping>
+
+  <servlet>
+  <servlet-name>place</servlet-name>
+  <servlet-class>com.ServletConfig.placementServlet</servlet-class>
+  
+  <init-param>
+  <param-name>JOB</param-name>
+  <param-value>Arrange interviews! </param-value>
+  
+  </init-param>
+  
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>place</servlet-name>
+  <url-pattern>/p</url-pattern> 
+  </servlet-mapping>
+
+
+
+</web-app> 
