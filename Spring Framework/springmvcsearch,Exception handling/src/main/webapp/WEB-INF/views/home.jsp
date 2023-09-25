@@ -1,6 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@page isELIgnored="false" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -14,43 +13,35 @@
 	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
 	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 	crossorigin="anonymous">
-
+<link href="<c:url value = "/resources/css/style.css"/>">
+<script src="<c:url value = "/resources/js/script.js"/>" type="text/javascript"></script>
 <title>Hello, world!</title>
 </head>
 <body>
+<h1 class="m-4">This is my Home page</h1>
+<img alt="my image" src='<c:url value="/resources/image/passport.jpg"/>' style= "width:50px;">
 
-	<div class="container mt-5">
-	<h3 class="text-center">${Header }</h3>
-	<h6 class="text-center">${Desc }</h3>
-		<form action="processform" method="post">
-			<div class="form-group">
-				<label for="exampleInputEmail1">User Name</label> <input type="text"
-					class="form-control" id="exampleInputEmail1"
-					aria-describedby="emailHelp" placeholder="Enter email" name="userName">
-			</div>
-			<div class="form-group">
-				<label for="userName">Email address</label> <input type="email"
-					class="form-control" id="userName" aria-describedby="emailHelp"
-					placeholder="Enter here" name="email">
-			</div>
-			<div class="form-group">
-				<label for="userPassword">user passwword</label> <input
-					type="password" class="form-control" id="userPassword"
-					aria-describedby="emailHelp" placeholder="Enter here" name="password">
-			</div>
-			<div class="container text-center">
-				<button type="submit" Class="btn btn-success">Signup</button>
+	<div class="container">
+		<div class="card mx-auto mt-5 bg-warning" style="width: 60%;">
+			<div class="card-body py-5">
+			
+			<h3 class="text-center text-white" style="text-transform:uppercase;">My Search</h3>
+			
+				<form class="mt-4" action="search" >
+
+					<div class="form-group">
+						<input type="text" name="querybox" placeholder="enter ur keyword"
+							class="form-control" />
+					</div>
+					<div class="container text-center">
+						<button class="btn btn-outline-light">Submit</button>
+					</div>
+				</form>
+
 			</div>
 
-		</form>
-
+		</div>
 	</div>
-
-
-
-
-
-	<h1>Hello, world!</h1>
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
